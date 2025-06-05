@@ -26,13 +26,13 @@ int main() {
     auto start3 = std::chrono::high_resolution_clock::now();
     getAllPerms(tree);
     auto end3 = std::chrono::high_resolution_clock::now();
-    auto duration1 = 
+    auto duration1 =
     std::chrono::duration_cast<std::chrono::microseconds>
     (end1 - start1);
-    auto duration2 = 
+    auto duration2 =
     std::chrono::duration_cast<std::chrono::microseconds>
     (end2 - start2);
-    auto duration3 = 
+    auto duration3 =
     std::chrono::duration_cast<std::chrono::microseconds>
     (end3 - start3);
     std::cout << '\n' << "Perm's number: " << perm << '\n' << '\n'

@@ -51,7 +51,7 @@ class PMTree {
     if (node->val) buffer.pop_back();
   }
 
-  PMTree(std::vector<char> in) {
+  explicit PMTree(std::vector<char> in) {
     std::sort(in.begin(), in.end());
     c_helper(root, in);
   }

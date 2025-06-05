@@ -7,12 +7,12 @@ int main() {
   srand(time(0));
   std::vector<char> v;
 
-  for (int i = 1; i < 11; i++) {
+  for (int i = 1; i < 5; i++) {
     
     for (int j = i; j > 0; j--)
       v.push_back(rand() % 255 + 1);
 
-      Tree tree(v);
+      PMTree tree(v);
       int pc = tree.fct();
 
       std::cout << '\n' << '\n' << "Alphabet size: " << v.size();

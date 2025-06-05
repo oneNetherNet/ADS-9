@@ -4,7 +4,7 @@
 #ifndef INCLUDE_TREE_H_
 #define INCLUDE_TREE_H_
 
-class Tree {
+class PMTree {
  private:
   struct Node {
     char val;
@@ -51,12 +51,12 @@ class Tree {
     if (node->val) buffer.pop_back();
   }
 
-  Tree(std::vector<char> in) {
+  PMTree(std::vector<char> in) {
     std::sort(in.begin(), in.end());
     c_helper(root, in);
   }
 
-  ~Tree() {
+  ~PMTree() {
     delete root;
   }
 
@@ -81,8 +81,8 @@ class Tree {
   }
 };
 
-std::vector<std::vector<char>> getAllPerms(const Tree& tree);
-std::vector<char> getPerm1(Tree& tree, int num);
-std::vector<char> getPerm2(Tree& tree, int num);
+std::vector<std::vector<char>> getAllPerms(const PMTree& PMTree);
+std::vector<char> getPerm1(PMTree& PMTree, int num);
+std::vector<char> getPerm2(PMTree& PMTree, int num);
 
 #endif  // INCLUDE_TREE_H_

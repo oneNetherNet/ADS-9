@@ -3,6 +3,7 @@
 #include  <fstream>
 #include  <locale>
 #include  <cstdlib>
+#include  <vector>
 #include  "tree.h"
 
 
@@ -14,16 +15,14 @@ std::vector<std::vector<char>> getAllPerms(const PMTree& tree) {
   return out;
 }
 
-std::vector<char> getPerm1(PMTree& tree, int num)
-{
+std::vector<char> getPerm1(PMTree& tree, int num) {
   if (tree.fct() < num)
     return std::vector<char>();
   std::vector<std::vector<char>> allPerms = getAllPerms(tree);
   return allPerms[num - 1];
 }
 
-std::vector<char> getPerm2(PMTree& tree, int num)
-{
+std::vector<char> getPerm2(PMTree& tree, int num) {
   if (tree.fct() < num)
     return std::vector<char>();
   std::vector<char> out;

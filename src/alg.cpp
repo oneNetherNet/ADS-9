@@ -7,14 +7,14 @@
 
 
 
-std::vector<std::vector<char>> getAllPerms(const Tree& tree) {
+std::vector<std::vector<char>> getAllPerms(const PMTree& tree) {
   std::vector<std::vector<char>> out;
   std::vector<char> buffer;
   tree.gap_helper(tree.getRoot(), buffer, out);
   return out;
 }
 
-std::vector<char> getPerm1(Tree& tree, int num)
+std::vector<char> getPerm1(PMTree& tree, int num)
 {
   if (tree.fct() < num)
     return std::vector<char>();
@@ -22,7 +22,7 @@ std::vector<char> getPerm1(Tree& tree, int num)
   return allPerms[num - 1];
 }
 
-std::vector<char> getPerm2(Tree& tree, int num)
+std::vector<char> getPerm2(PMTree& tree, int num)
 {
   if (tree.fct() < num)
     return std::vector<char>();
